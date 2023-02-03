@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JogosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
@@ -15,3 +16,5 @@ use App\Http\Controllers\BookController;
 */
 
 Route::get('/', [BookController::class, 'index']);
+
+Route::get('/jogos', [JogosController::class, 'index']);
