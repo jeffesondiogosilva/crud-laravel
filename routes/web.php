@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\JogosController;
+use App\Http\Controllers\FilmesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
@@ -17,4 +17,4 @@ use App\Http\Controllers\BookController;
 
 Route::get('/', [BookController::class, 'index']);
 
-Route::get('/jogos', [JogosController::class, 'index']);
+Route::get('/filmes', [FilmesController::class, 'index']);
