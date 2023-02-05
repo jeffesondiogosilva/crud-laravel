@@ -20,8 +20,7 @@
         <tr>
             <th>{{ $filme->id }}</th>
             <td>{{ $filme->nome }}</td>
-            <td>{{ $filme->filme_preferido }}</td>
-            
+            <td>{{ $filme->filme_preferido }}</td>            
         </tr>
     @endforeach
   </tbody>
