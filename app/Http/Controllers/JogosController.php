@@ -8,7 +8,7 @@ class JogosController extends Controller
 {
     public function index()
     {
-        return ('jogos');
+        return view('jogos.index');
 
     }
 }
