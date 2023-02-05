@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Filme;
 use Illuminate\Http\Request;
 
 class FilmesController extends Controller
 {
     public function index(){
-        $nome = 'Jeff';
-        $filme_preferido = 'Matrix';
-        return view('filmes.index', ['nome'=>$nome, 'filme-preferido'=>$filme_preferido]);
+
+        $filmes = Filme::all();
+        // dd($filmes);
+        return view('filmes.index', ['filmes'=>$filmes]);
     }
 }
