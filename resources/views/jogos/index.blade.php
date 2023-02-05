@@ -12,7 +12,8 @@
 
     <p>Id: {{ $id }}</p>
     <p>Nome: {{ $nome }}</p>
-    <p>Filme Preferido: {{ $filme-preferido }}</p>
+    <p>Filme Preferido: {{  }}</p>
+    
     
 </body>
 </html>
