@@ -20,4 +20,10 @@ Route::get('/', [BookController::class, 'index']);
 
 Route::get('/filmes', [FilmesController::class, 'index']);
 
-Route::get('/jogos', [JogosController::class, 'index']);
+
+Route::prefix('jogos')->group(function () {
+
+    Route::get('/', [JogosController::class, 'index'])->name('jogos-index');
+    Route::get('/create', [JogosController::class, 'create'])->name('jogos-create');
+});
+
