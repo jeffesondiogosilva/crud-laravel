@@ -10,9 +10,9 @@ class JogosController extends Controller
 {
     public function index()
     {
-        $jogos = Jogo::all();
-        dd($jogos);
-        return view('jogos.index');
+        $jogos = Jogo::all();  //o método all vai retornar todos os dados da tabela jogos
+        
+        return view('jogos.index', ['jogos'=>$jogos]);
 
     }
 }
