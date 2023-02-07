@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app')   //usando layouts como estrutura base
 
 @section('content')
 
