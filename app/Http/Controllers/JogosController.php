@@ -22,4 +22,10 @@ class JogosController extends Controller
         return view('jogos.create');
 
     }
+    public function store(Request $request)
+    {
+        // return view('jogos.store');
+        dd($request);
+
+    }
 }
