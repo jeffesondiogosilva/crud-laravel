@@ -9,7 +9,7 @@ class Jogo extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable = [      //variável que armazena os atributos preenchíveis da tabela
         'nome',
         'categoria',
         'ano_criacao',
