@@ -2,9 +2,7 @@
 
 @section('title', 'Criação')
 
-
 @section('content')
-    
     <div class="container mt-5">
         <h1>Crie um novo jogo</h1>
         <hr>
