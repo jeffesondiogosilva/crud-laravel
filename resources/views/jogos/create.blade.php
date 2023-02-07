@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Create')
+@section('title', 'Criação')
 
 
 @section('content')
@@ -8,8 +8,8 @@
     <div class="container mt-5">
         <h1>Crie um novo jogo</h1>
         <hr>
-        <form method="post" action="">
-            
+        <form method="post" action="{{ route('jogos-store')}}">
+        @csrf            
             <div class="form-group">
                 <div class="form-group">
                     <label for="nome">Nome:</label>

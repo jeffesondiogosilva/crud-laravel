@@ -24,8 +24,9 @@ class JogosController extends Controller
     }
     public function store(Request $request)
     {
-        // return view('jogos.store');
-        dd($request);
+
+        Jogo::create($request->all());
+        return redirect()->route('jogos-index');
 
     }
 }
