@@ -1,3 +1,3 @@
-@extends('layouts.app')
 
-@filme('filmes.mensagem' ['titulo' => 'Mensagem de teste']);
+
+<h1>{{ $title }}</h1>
