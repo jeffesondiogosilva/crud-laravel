@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('title', 'Listagem')
 
@@ -26,4 +26,6 @@
   </tbody>
 </table>
 
-@endsection
+@endsection -->
+
+<h1>{{ $titulo }}</h1>
