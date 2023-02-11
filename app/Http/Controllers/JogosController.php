@@ -19,7 +19,7 @@ class JogosController extends Controller
 
     public function create()
     {
-        
+
         return view('jogos.create');
 
     }
@@ -39,9 +39,13 @@ class JogosController extends Controller
         }
         else {
             return redirect()->route('jogos-index');
-        }
-        
-       
+        }               
 
     }
+    public function update(Request $request)
+    {
+        dd($request);               
+
+    }
+
 }

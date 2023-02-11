@@ -6,8 +6,9 @@
     <div class="container mt-5">
         <h1>Editar jogo</h1>
         <hr>
-        <form method="post" action="{{ route('jogos-store')}}">
-        @csrf            
+        <form method="post" action="{{ route('jogos-update', ['id' => $jogos->id]) }}">
+        @csrf 
+        @method('PUT')            
             <div class="form-group">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -26,7 +27,7 @@
                     <input type="number" class="form-control" name="valor" value="{{ $jogos->valor }}" placeholder="digite o valor">
                 </div> <br>
                 <div class="form-group">                    
-                    <input type="submit" class="btn btn-success" name="submit" value="Enviar" >
+                    <input type="submit" class="btn btn-success" name="submit" value="Atualizar" >
                 </div>
             </div>
         </form>
