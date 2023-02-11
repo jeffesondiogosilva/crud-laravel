@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Criação')
+@section('title', 'Edição')
 
 @section('content')
     <div class="container mt-5">
-        <h1>Crie um novo jogo</h1>
+        <h1>Editar jogo</h1>
         <hr>
         <form method="post" action="{{ route('jogos-store')}}">
         @csrf            
             <div class="form-group">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" class="form-control" name="nome" value="" placeholder="digite um nome">
+                    <input type="text" class="form-control" name="nome" value="{{ $jogos->nome }}" placeholder="digite um nome">
                 </div> <br>
                 <div class="form-group">
                     <label for="categoria">Categoria:</label>

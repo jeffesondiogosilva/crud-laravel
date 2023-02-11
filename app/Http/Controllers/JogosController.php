@@ -19,6 +19,7 @@ class JogosController extends Controller
 
     public function create()
     {
+        
         return view('jogos.create');
 
     }
