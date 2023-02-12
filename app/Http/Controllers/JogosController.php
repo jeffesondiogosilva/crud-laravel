@@ -44,7 +44,6 @@ class JogosController extends Controller
     }
     public function update(Request $request, $id)
     {
-
         $data = [
             'nome' => $request->nome,
             'categoria' => $request->categoria,
