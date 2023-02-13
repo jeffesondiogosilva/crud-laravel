@@ -16,7 +16,6 @@ class JogosController extends Controller
 
     }
 
-
     public function create()
     {
 
