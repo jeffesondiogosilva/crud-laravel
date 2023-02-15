@@ -28,5 +28,5 @@ Route::prefix('jogos')->group(function () {
     Route::put('/{id}', [JogosController::class, 'update'])->where('id', '[0-9]+')->name('jogos-update');
 });
 
-Route::get('/', [SeriesController::class, 'index']);
+Route::get('/series', [SeriesController::class, 'index']);
 

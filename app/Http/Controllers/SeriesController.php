@@ -10,6 +10,6 @@ class SeriesController extends Controller
 
         $series = Serie::all();    //Serie é a model
 
-        return view('series.index');
+        return view('series.index', ['series'=>$series]);
     }
 }
