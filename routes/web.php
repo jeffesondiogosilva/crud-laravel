@@ -4,7 +4,7 @@ use App\Http\Controllers\FilmesController;
 use App\Http\Controllers\JogosController;
 use App\Http\Controllers\SeriesController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+
 
 /*
 |--------------------------------------------------------------------------
