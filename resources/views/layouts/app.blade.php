@@ -10,8 +10,9 @@
 </head>
 
 <body>
-
+    <h1>@yield('destaque')</h1>
     @yield('content')
+    
     
 
 </body>
