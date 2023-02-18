@@ -44,6 +44,8 @@
                 @endforeach
             </tbody>
         </table>    
+
+        @include('layouts.input.blade');
     </div>
 
 @endsection
