@@ -1,2 +1,2 @@
-<label for="">{{ $titulo }}</label>
-<input type="" name="" value="{{valor}}">
+<label for="">@isset($titulo){{ $titulo }} @endisset</label>
+<input type="" name="" value="@isset($value){{$value}}@endisset">
