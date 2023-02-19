@@ -35,7 +35,7 @@
                 <td>{{ $jogo->valor }}</td>
 
                 <th class="d-flex">
-                    <a href="{{ route('jogos-edit', ['id' => $jogo->id]) }}" class="btn btn-primary"> <svg
+                    <a href="{{ route('jogos-edit', ['id' => $jogo->id]) }}" class="btn btn-primary me-2"> <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pencil-fill" viewBox="0 0 16 16">
                             <path
