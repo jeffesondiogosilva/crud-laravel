@@ -56,7 +56,6 @@
         </tbody>
     </table>
 
-    @include('layouts.input')
 </div>
 
 @endsection
