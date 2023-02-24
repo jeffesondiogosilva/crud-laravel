@@ -34,6 +34,12 @@ Route::get('/series', [SeriesController::class, 'index']);
 
 Route::get('/produtos', function(){
 
-    return view('produtos.index');
+    $busca = request('search');
+
+    return view('produtos.index', ['busca' => $busca]);
 });
 
+Route::get('/produtos_teste/{id}', function($id = null){
+
+    return view('produtos.id', ['id' => $id]);
+});
