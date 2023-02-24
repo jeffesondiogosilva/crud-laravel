@@ -31,3 +31,9 @@ Route::prefix('jogos')->group(function () {
 
 Route::get('/series', [SeriesController::class, 'index']);
 
+
+Route::get('/produtos', function(){
+
+    return view('produtos.index');
+});
+
