@@ -3,6 +3,7 @@
 use App\Http\Controllers\FilmesController;
 use App\Http\Controllers\JogosController;
 use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,7 +36,7 @@ Route::get('/series', [SeriesController::class, 'index']);
 Route::get('/produtos', function(){
 
     $busca = request('search');
-
+    
     return view('produtos.index', ['busca' => $busca]);
 });
 
@@ -43,3 +44,6 @@ Route::get('/produtos_teste/{id}', function($id = null){
 
     return view('produtos.id', ['id' => $id]);
 });
+
+Route::get('/', [EventController::class, 'index']);
+Route::get('/', [EventController::class, 'create']);
