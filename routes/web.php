@@ -46,4 +46,5 @@ Route::get('/produtos_teste/{id}', function($id = null){
 });
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/', [EventController::class, 'create']);
+
+Route::get('/create', [EventController::class, 'create']);
