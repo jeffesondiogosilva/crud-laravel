@@ -1,9 +1,13 @@
 @extends('layouts.main')
 
-<h1>Eventos</h1>
+@section('title', 'HDC Events')
 
-<div class="container">
+@section('content')
 
-   
+@foreach ($events as $event)
 
-</div>
+    <p>{{ $event->title }} -- {{ $event->description}}</p>
+
+@endforeach
+
+@endsection

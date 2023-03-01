@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Event;
+
 class EventController extends Controller
 {
     /**
@@ -12,15 +14,9 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $nome = "Matheus";
-        $idade = 29;
-
-        $arr = [10,20,30,40,50];
-
-        $nomes = ["Matheus", "Maria", "João", "Saulo"];
-
-        return view('events.index');
+    {       
+        $events = Event::all();
+        return view('events.index', ['events' => $events]);
     }
 
     /**
