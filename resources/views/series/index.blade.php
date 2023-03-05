@@ -1,37 +1,14 @@
-@extends('layouts.app')   
-<!-- usando layouts como estrutura base  -->
+<x-layout title='Séries'>
+    
+    <a href="series/criar" class="btn btn-dark mb-2">Adicionar</a>
 
-@section('destaque', 'Series') 
+    <ul class="list-group">
+        @foreach ($series as $serie)
+        <li class="list-group-item">{{ $serie->nome }}</li>
+        @endforeach
+    </ul>
 
-@section('content')
-
-    <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Ano de criação</th>
-                   
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($series as $serie)
-                <tr>
-                    <th>{{ $serie->id }}</th>
-                    <td>{{ $serie->nome }}</td>
-                    <td>{{ $serie->categoria }}</td>
-                    <td>{{ $serie->ano_criacao }}</td>
-                    
-
-                    
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-    </body>
-</html>
-
-
-@endsection
+    <script>
+        const series = {{ Js::from($series)}};
+    </script>
+</x-layout>

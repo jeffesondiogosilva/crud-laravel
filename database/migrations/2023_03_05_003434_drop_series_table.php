@@ -13,14 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('series', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 55);
-            $table->string('categoria', 55);
-            $table->year('ano_criacao');
-            $table->timestamps();
-
-        });
+        Schema::dropIfExists('series');
     }
 
     /**
@@ -30,6 +23,11 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::create('series', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome', 128);            
+            $table->timestamps();
+        });
+        
     }
 };
