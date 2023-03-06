@@ -11,9 +11,7 @@ class SeriesController extends Controller
 {
     public function index(){
 
-        // $series = Serie::all();    //Serie é a model
-
-        $series = DB::select("SELECT * FROM series");
+        $series = Serie::query()->orderBy('nome')->get();    //Serie é a model        
 
         return view('series.index')->with('series', $series);
     }
@@ -25,13 +23,15 @@ class SeriesController extends Controller
     }
     public function store(Request $request){
 
-        $nomeSerie = $request->input('nome');
+        Serie::create($request->all());
 
-        if(DB::insert('INSERT INTO series (nome) VALUES (?)', [$nomeSerie])) {
-            return redirect('series');
-        } else {
-            return "Deu erro";
-        }
+        return to_route('series.index');
 
+    }
+    public function destroy(Request $request){
+        
+        Serie::destroy($request->series);
+
+        return to_route('series.index');
     }
 }

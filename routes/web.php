@@ -30,22 +30,18 @@ Route::prefix('jogos')->group(function () {
     Route::delete('/{id}', [JogosController::class, 'destroy'])->where('id', '[0-9]+')->name('jogos-destroy');
 });
 
-Route::get('/series', [SeriesController::class, 'index']);
-
-Route::get('/series/criar', [SeriesController::class, 'create']);
-
-Route::post('/series/salvar', [SeriesController::class, 'store']);
+Route::resource('/series', SeriesController::class)
+    ->only(['index', 'create',  'store', 'destroy' ]);
 
 
-
-Route::get('/produtos', function(){
+Route::get('/produtos', function () {
 
     $busca = request('search');
-    
+
     return view('produtos.index', ['busca' => $busca]);
 });
 
-Route::get('/produtos_teste/{id}', function($id = null){
+Route::get('/produtos_teste/{id}', function ($id = null) {
 
     return view('produtos.id', ['id' => $id]);
 });
