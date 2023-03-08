@@ -30,7 +30,8 @@ Route::prefix('jogos')->group(function () {
     Route::delete('/{id}', [JogosController::class, 'destroy'])->where('id', '[0-9]+')->name('jogos-destroy');
 });
 
-Route::resource('/series', SeriesController::class);
+Route::resource('/series', SeriesController::class)
+    ->except('show');
 
 
 Route::get('/produtos', function () {

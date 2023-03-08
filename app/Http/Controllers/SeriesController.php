@@ -40,7 +40,14 @@ class SeriesController extends Controller
     }
     public function edit(Serie $series,  Request $request){
                     
-        $request->input($series->nome);
-        return to_route('series.create',);        
+        return view('series.edit')->with('series', $series);
+    }
+    public function update(Serie $series,  Request $request){
+                    
+        $series->fill($request->all());
+        $series->save();
+
+        return to_route('series.index')
+            ->with('mensagem.sucesso', "Série '$series->nome' atualizada com sucesso!");
     }
 }
