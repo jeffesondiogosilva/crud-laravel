@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder;
 
-class Serie extends Model
+class Series extends Model
 {
     use HasFactory;
 
@@ -13,9 +14,10 @@ class Serie extends Model
         'nome',        
     ];
 
-    public function temporadas()
+    public function seasons()
     {
 
         return $this->hasMany(Season::class, 'series_id');
     }
+   
 }
